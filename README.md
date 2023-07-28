@@ -15,7 +15,7 @@
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/kP1MMzN.png" height="80%" width="80%" alt="Create 1 RG and 2 VM"/>
+<img src="https://i.imgur.com/D1BYtb3.png" height="80%" width="80%" alt="Create 1 RG and 2 VM"/>
 </p>
 <p>
 Diagram of entire process
@@ -23,7 +23,7 @@ Diagram of entire process
 <br />
 
 <p>
-<img src="https://i.imgur.com/LvqwQAB.png" height="80%" width="80%" alt="Make the DC1 into a static ip address"/>
+<img src="https://i.imgur.com/x8c7j0L.png" height="80%" width="80%" alt="Make the DC1 into a static ip address"/>
 </p>
 <p>
 Create 2 virtual machine inside the Resource Group; one is Windows and the other is Ubuntu
@@ -31,10 +31,11 @@ Create 2 virtual machine inside the Resource Group; one is Windows and the other
 <br />
 
 <p>
-<img src="https://i.imgur.com/KgvLtCw.png" height="80%" width="80%" alt="Ping DC1 but it dont work, use wf.msc on DC1 and change inbound rules and now ping works"/>
+<img src="https://i.imgur.com/CRxUTPJ.jpg" height="80%" width="80%" alt="Ping DC1 but it don't work so use wf.msc on DC1 and change inbound rules.s"/>
+<img src="https://i.imgur.com/Yo882X3.jpg" height="80%" width="80%" alt="Ping now works"/>
 </p>
 <p>
-Remote Desktop Connection to the VM1 public IP Address
+Ping DC1 however it doesn't work so you have to go into DC1 and go to wf.msc. Next change the inbound rules by enabling each
 </p>
 <br />
 
