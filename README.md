@@ -27,7 +27,7 @@ Diagram of entire process
 <img src="https://i.imgur.com/D1BYtb3.png" height="80%" width="80%" alt="Make the DC1 into a static ip address"/>
 </p>
 <p>
-Create 2 virtual machine inside the Resource Group; one is Windows and the other is Ubuntu
+Create 2 virtual machine inside the Resource Group; one is Windows Server 2022 and the other is Windows 10.
 </p>
 <br />
 
