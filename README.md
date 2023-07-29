@@ -15,7 +15,7 @@
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/fZnRAE8.png" height="80%" width="80%" alt="Create 1 RG and 2 VM"/>
+<img src="https://i.imgur.com/pBIdWFa.png" height="80%" width="80%" alt="Create 1 RG and 2 VM"/>
 </p>
 <p>
 Diagram of entire process
