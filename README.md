@@ -15,7 +15,7 @@
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/D1BYtb3.png" height="80%" width="80%" alt="Create 1 RG and 2 VM"/>
+<img src="https://i.imgur.com/fZnRAE8.png" height="80%" width="80%" alt="Create 1 RG and 2 VM"/>
 </p>
 <p>
 Diagram of entire process
@@ -24,6 +24,7 @@ Diagram of entire process
 
 <p>
 <img src="https://i.imgur.com/x8c7j0L.png" height="80%" width="80%" alt="Make the DC1 into a static ip address"/>
+<img src="https://i.imgur.com/D1BYtb3.png" height="80%" width="80%" alt="Make the DC1 into a static ip address"/>
 </p>
 <p>
 Create 2 virtual machine inside the Resource Group; one is Windows and the other is Ubuntu
