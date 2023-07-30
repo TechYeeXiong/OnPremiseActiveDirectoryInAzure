@@ -37,25 +37,26 @@ Create 2 virtual machine inside the Resource Group; one is Windows Server 2022 a
 <img src="https://i.imgur.com/Yo882X3.jpg" height="80%" width="80%" alt="Ping now works"/>
 </p>
 <p>
-Ping DC1 however it doesn't work so you have to go into DC1 and go to wf.msc. Next change the inbound rules by enabling the ICMP Echo Request.
+Go to Client1 and Ping DC1 however it doesn't work so you have to go into DC1 and go to wf.msc. Next change the inbound rules by enabling the ICMP Echo Request. Now go back to Client1 and ping DC1; you will notice that now it's able to ping.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/OHQ1B65.jpg" height="80%" width="80%" alt="Go to DC1 and click on add roles and features wizard. Activate active directory domain service"/>
+<img src="https://i.imgur.com/Mlgh5cY.jpg" height="80%" width="80%" alt="Go to DC1 and click on add roles and features wizard. Activate active directory domain service"/>
+<img src="https://i.imgur.com/0AJ3cuO.jpg" height="80%" width="80%" alt="Promote server to Domain Controller"/>
 </p>
 <p>
-Download Wireshark inside the virtual machine
+Go to DC1 and click on add roles and features wizard. Activate active directory domain service. Notice how there's a warning that something is not finished yet so promote server to Domain Controller.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/gjlwxEo.jpg" height="80%" width="80%" alt="Use Ping"/>
-<img src="https://i.imgur.com/mdfsOYp.png" height="80%" width="80%" alt="Use Ping"/>
-<img src="https://i.imgur.com/W094nVH.jpg" height="80%" width="80%" alt="Use Ping"/>
+<img src="https://i.imgur.com/pmMOeSd.jpg" height="80%" width="80%" alt="add a new forest"/>
+<img src="https://i.imgur.com/hkBtnBQ.jpg" height="80%" width="80%" alt="Create a password"/>
+<img src="https://i.imgur.com/is2uu89.jpg" height="80%" width="80%" alt="Login to DC1"/>
 </p>
 <p>
-Use the ICMP protocol as the filter to observe the traffic. Open Windows Powershell then use "ping 10.0.0.5" and "ping www.google.com". Next go to VM2's network security group and create an inbound security rule to deny ICMP traffic. These commands will show how much data is being sent and received.
+First, add a new forest and type a root for the username. Create a password. Exit out of DC1 and then login back using the root and password that you created.
 </p>
 <br />
 
