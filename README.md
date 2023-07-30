@@ -61,41 +61,52 @@ First, add a new forest and type a root for the username. Create a password. Exi
 <br />
 
 <p>
-<img src="https://i.imgur.com/CyRmSTz.jpg" height="80%" width="80%" alt="After installing AD, promote it into a domain controller. Add a new forest and create the root name. Create a password."/>
+<img src="https://i.imgur.com/TTuCJQ1.jpg" height="80%" width="80%" alt="Creating Jane Doe as an admin user"/>
+<img src="https://i.imgur.com/Lrvixmd.jpg" height="80%" width="80%" alt="login as Jane Doe"/>
 </p>
 <p>
-Use SSH to filter the traffic. In Powershell, use SSH to remotely connect to VM2 by typing "ssh labuser@10.0.0.5". Next type "pwd", "id", and "ls -lasth". Observe the traffic.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/JF6RkKG.jpg" height="80%" width="80%" alt="DHCP"/>
-</p>
-<p>
-Use DHCP to filter the traffic. In Powershell, type "ipconfig /renew" then observe the traffic.
+First, create Jane Doe as an admin user and create the username as "jane_admin". Next, add Jane Doe into the Domain Admins group. Now log into Jane Doe's account as admin by typing "mydomain.com\jane_admin" as the username and your password.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/lFkECUi.jpg" height="80%" width="80%" alt="Go onto whatismyipaddress.com"/>
+<img src="https://i.imgur.com/x5XpP71.jpg" height="80%" width="80%" alt="Change client1"/>
+<img src="https://i.imgur.com/OyZuXwB.jpg" height="80%" width="80%" alt="Change the dns server of client1"/>
+<img src="https://i.imgur.com/Q7V4epV.jpg" height="80%" width="80%" alt="restart client1"/>
 </p>
 <p>
-The IP Address is now located in Tokyo.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/f06KkBn.jpg" height="80%" width="80%" alt="DNS"/>
-</p>
-<p>
-Use DNS to filter the traffic. In Powershell, type "nslookup www.google.com" and "nslookup www.disney.com" to find the IP Address for both website and observe the traffic.
+Go into Client1 and go into the about page. Click on rename this page(advanced) then click "change...". Type in "mydomain.com", however there's an error because Client1's DNS Server is not connected to DC1. Go into DC1 and change the DNS Server into DC1's private address which is "10.0.0.4" then restart Client1.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/KqAPmcB.jpg" height="80%" width="80%" alt="RDP"/>
+<img src="https://i.imgur.com/Yum6wDk.jpg" height="80%" width="80%" alt="Change the Client1 Domain"/>
 </p>
 <p>
-In order to use RDP in the filter; you type in "tcp.port == 3389". Since RDP was selected as the protocol for VM1 when it was created; the rdp filter will spam nonstop. Every movement or words being typed inside the virtual machine will cause traffic to be sent.
+Join Client1 into DC1 server's domain. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/O1EUspE.jpg" height="80%" width="80%" alt="Login to Client1"/>
+</p>
+<p>
+Login to Client1 with the username of DC1 server's domain which is "mydomain.com\jane_admin"
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/yy1c8qM.png" height="80%" width="80%" alt="Allow remote desktop"/>
+</p>
+<p>
+Allow remote desktop connection for all domain users on Client1.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/ow1lUwa.jpg" height="80%" width="80%" alt="Check the Users"/>
+</p>
+<p>
+Check the users member and you notice that we have added Jane Doe as an admin and labuser as the domain users. This means that anyone can login to Client1 machine using their username and password.
 </p>
 <br />
